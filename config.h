@@ -96,33 +96,66 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	/*
+	 * dracula colors
+	 */
+
+	// ansi black
+	"#21222c",
+
+	// ansi red
+	"#ff5555",
+
+	// ansi green
+	"#50fa7b",
+
+	// ansi yellow
+	"#f1fa8c",
+
+	// ansi blue
+	"#bd93f9",
+
+	// ansi magenta
+	"#ff79c6",
+
+	// ansi cyan
+	"#8be9fd",
+
+	// ansi white
+	"#f8f8f2",
+
+	// ansi bright black
+	"#6272a4",
+
+	// ansi bright red
+	"#ff6e6e",
+
+	// ansi bright green
+	"#69ff94",
+
+	// ansi bright yellow
+	"#ffffa5",
+
+	// ansi bright blue
+	"#d6acff",
+
+	// ansi bright magenta
+	"#ff92df",
+
+	// ansi bright cyan
+	"#a4ffff",
+
+	// ansi bright white
+	"#ffffff",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	"#282a36", // dracula background
+	"#f8f8f2", // dracula foreground (same as ansi white)
+	"#44475a", // dracula selection
+	"#6272a4", // dracula comment (same as ansi bright black)
 };
 
 
@@ -130,10 +163,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
